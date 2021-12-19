@@ -1,0 +1,10 @@
+/**
+
+  This experimental platform has been developed as a proof of concept for 
+  developing a prototype of a digital twin for patient pathways in a hospital.
+
+  This platform composite of two components:
+  (1) the "emulator" which was designed and developed with the WITNESS  (version 23.0) simulation tool 
+  (2) the "Digital Twin" which was designed and developed with the FlexSim (version 20.1.1) simulation tool
+
+*/

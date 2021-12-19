@@ -1,0 +1,4 @@
+/**
+This emulator has been developed to mimic the behavior of a hospital
+This emulator has been designed and developed by the WITNESS simulation tool (Version 23.0)
+*/

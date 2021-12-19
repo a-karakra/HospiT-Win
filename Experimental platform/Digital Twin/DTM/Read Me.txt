@@ -1,0 +1,8 @@
+/**Authors: Abdallah Karakra, Franck Fontanili, Elyes Lamine, Jacques Lamothe 
+   This Digital Twin Designed and developed by FlexSim Simulation tool (version 20.1.1) 
+*/
+
+- Please create a connector to a database so that you can initialize the model
+- A middleware software to bridge the gap between the digital twin and the 
+  database is needed (the selection of this middleware it depends on your database)
+- Please activate the emulation part according to your selected middleware 

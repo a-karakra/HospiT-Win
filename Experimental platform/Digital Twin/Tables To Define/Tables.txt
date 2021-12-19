@@ -1,0 +1,50 @@
+CurrentStateOfHospital
+Structure: {ID, Patient_ID_EventID, EventID, TimeStamp, Description, TimeStamp_DB, SensorPoint, Patient_ID}
+Example  : {1,	
+            25465,	
+            2020.5.13.16.25.23.2984_4001,
+            4001,	
+            13/05/2020 16:44:50,	
+            Patient is coming in the waiting room,	
+            2020-05-13 16:44:49,	
+            1001,	
+            2020.5.13.16.25.23.2984
+           }
+
+TrackingTable
+Structure: {ControlID}
+Example: {0} //default value
+
+PatientIDTable
+Structure: {PatientID}
+Example: {2020.5.13.17.29.42.3000}
+
+Hospital_Pathways
+Structure: {Control  identification , Description, Expected next destination}
+Example  : {3002,
+            End registration,
+            int stream = 30;
+            double randomnum = uniform(0, 100, stream);
+            double total = 0.0;
+            /***tagex:data*/
+            total += 54.59/*Percent*/; 
+            if (randomnum <= total)
+	      return 1002;
+            total += 45.41/*Percent*/; 
+            if (randomnum <= total)
+	      return "Chairs1";//4001
+           }
+
+TrackingVariables
+Structure: {Value}
+Example  : {0}
+  
+ControlFeedBack
+Structure: {controlID, current Value, max value, Control Message, Solutions, Error Message}
+Example  : {2001,
+            0,
+            3,
+            return "Number of patients on the waiting line exceeded " + Table("ControlFeedBack")[2][3];,
+            Add new registration desk,
+            Number of patients on the waiting line exceeded 3 . Add new registration desk.
+            } 

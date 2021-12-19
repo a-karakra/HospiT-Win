@@ -1,0 +1,13 @@
+print("The time is Synchronized as the real world time...");
+runspeed(1);
+double startTime = (applicationcommand("getunixtime")+2*3600) - Model.time * getmodelunit(TIME_MULTIPLE);
+////print ("start time is "+ numtostring(startTime));
+treenode startNode = getmodelunit(START_TIME_NODE);
+set(startNode, startTime);
+applicationcommand("convertunixtime", startNode, startTime);
+treenode stopTime = getmodelunit(STOP_TIME_NODE);
+set(stopTime, startTime + getmodelunit(TIME_MULTIPLE) * get(node("MAIN:/project/exec/stoptime")));
+applicationcommand("convertunixtime", stopTime, get(stopTime));
+set(getmodelunit(CURRENT_TIME_NODE), 0); //Cause the RunPanel to update
+
+print("Preparing the model for synchronization...");
